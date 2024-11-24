@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: vidly-db-service
+  namespace: vidly
+spec:
+  selector:
+    app: vidly
+  ports:
+  - name: http
+    port: 5432
+    targetPort: 5432
+  type: ClusterIP
