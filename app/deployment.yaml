@@ -17,4 +17,11 @@ spec:
       - name: vidly-db
         image: docker.io/nickdraper/vidly-db:latest
         ports:
-        - containerPort: 8000
+        - containerPort: 5432
+        env:
+        - name: POSTGRESQL_USER
+          value: user
+        - name: POSTGRESQL_PASSWORD
+          value: password
+        - name: POSTGRESQL_DATABASE
+          value: db
